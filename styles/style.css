@@ -80,11 +80,13 @@ header input:checked ~ label .line3 {
 }
 
 header input:checked ~ label ~ .menu-container {
-  height: 190px;
+  height: 191px;
 }
 
 header input:checked ~ label ~ .menu-container #menu li {
-  border-bottom: 1px solid #C4E8C2;
+  text-align: center;
+  width: 50%;
+  border-bottom: 2px solid #C4E8C2;
   height: 40px;
 }
 
@@ -119,10 +121,13 @@ header div.menu-container #menu {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 10px;
 }
 
 header div.menu-container #menu li {
+  justify-self: center;
   text-align: center;
   height: 0;
   overflow: hidden;

@@ -58,11 +58,13 @@ header {
         }
 
         & ~ .menu-container {
-            height: 190px;
+            height: 191px;
 
             & #menu {
                 li {
-                    border-bottom: 1px solid $hamburgerColor;
+                    text-align: center;
+                    width: 50%;
+                    border-bottom: 2px solid $hamburgerColor;
                     height: 40px;
                 }
             }
