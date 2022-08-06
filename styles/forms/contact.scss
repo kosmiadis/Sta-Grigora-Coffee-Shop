@@ -1,0 +1,40 @@
+@import "abstracts/colors.scss";
+
+@mixin allavailblespace () {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    div.form-container {
+        padding: 2em;
+        margin: auto;
+        width: 95%;
+        outline: 2px solid blue;
+        & form {
+            padding-block: 3em;
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-auto-rows: max-content;
+            row-gap: 10px;
+            column-gap: 10px;
+
+            & label {
+                font-size: 1.1em;
+                font-weight: 600;
+                font-family: 'Lato';
+            }
+            & textarea {
+                @include allavailblespace();
+                resize: none;
+            }
+
+            & input[type='sumbit'] {
+                @include allavailblespace();
+            }
+        }
+    }
+}

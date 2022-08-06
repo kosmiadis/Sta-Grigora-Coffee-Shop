@@ -67,6 +67,9 @@ header {
                     border-bottom: 2px solid $hamburgerColor;
                     height: 40px;
                 }
+                li:last-child {
+                    border: unset;
+                }
             }
         }
         
