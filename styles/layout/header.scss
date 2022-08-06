@@ -13,8 +13,6 @@ header {
     & #company-logo {
         padding: 1em;
         width: 180px;
-        
-
     }
 
     & div.menu-container {
@@ -53,4 +51,46 @@ header {
 
         }
     }
+}
+
+@media screen and (min-width: 481px) {
+
+    header {
+        grid: unset;
+        grid-template-columns: 100%;
+        text-align: center;
+        align-items: center;
+
+        & #company-logo {
+            grid-column-start: 1;
+            grid-column-end: -1;
+            padding: 1em;
+            width: 300px;
+        }
+
+        & label {
+            display: none;
+        }
+
+        & div.menu-container {
+            height: 40px;
+            
+            & #menu {
+                margin: auto;
+                
+                display: grid;
+                grid-template-columns: repeat(4,min-content);
+                width: 80%;
+                justify-content: space-around;
+                li {
+                    width: min-content;
+                    height: 40px;
+                }
+            }
+        }
+        
+
+
+    }
+
 }

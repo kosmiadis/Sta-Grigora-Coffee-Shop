@@ -146,6 +146,38 @@ header div.menu-container #menu li a {
   color: #C4E8C2;
 }
 
+@media screen and (min-width: 481px) {
+  header {
+    grid: unset;
+    grid-template-columns: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  header #company-logo {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 1em;
+    width: 300px;
+  }
+  header label {
+    display: none;
+  }
+  header div.menu-container {
+    height: 40px;
+  }
+  header div.menu-container #menu {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    width: 80%;
+    justify-content: space-around;
+  }
+  header div.menu-container #menu li {
+    width: min-content;
+    height: 40px;
+  }
+}
+
 footer {
   text-align: center;
   color: #C4E8C2;
@@ -194,17 +226,20 @@ footer div.social div a i {
   color: #C4E8C2;
 }
 
-footer #address-title {
-  font-weight: 900;
-  font-size: 1.2em;
+footer div.address {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 50%;
-  border-bottom: 2px solid #C4E8C2;
-  padding-bottom: 5px;
-  grid-column-start: 1;
-  grid-column-end: -1;
 }
 
-footer #address {
+footer div.address #address-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  border-bottom: 2px solid #C4E8C2;
+  padding-bottom: 5px;
+}
+
+footer div.address #address {
   font-size: 1.2em;
   font-weight: 900;
   margin: 0;
@@ -214,6 +249,24 @@ footer #copyright {
   padding-top: 10px;
   font-weight: 900;
   font-weight: 1.3em;
+}
+
+@media screen and (min-width: 581px) {
+  footer {
+    grid: unset;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "social address" "copyright copyright";
+  }
+  footer div.social {
+    grid-area: social;
+  }
+  footer div.address {
+    grid-area: address;
+  }
+  footer #copyright {
+    grid-area: copyright;
+    justify-self: center;
+  }
 }
 
 main {

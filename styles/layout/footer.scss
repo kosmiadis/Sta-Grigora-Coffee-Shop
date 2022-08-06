@@ -47,25 +47,51 @@ footer {
         }
     }
 
-    & #address-title {
-        font-weight: 900;
-        font-size: 1.2em;
+    div.address {
+        display: grid;
+        grid-template-columns: 1fr;
         width: 50%;
-        border-bottom: 2px solid $hamburgerColor;
-        padding-bottom: 5px;
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
+        & #address-title {
+            font-weight: 900;
+            font-size: 1.2em;
+            border-bottom: 2px solid $hamburgerColor;
+            padding-bottom: 5px;
+        }
 
-    & #address {
-        font-size: 1.2em;
-        font-weight: 900;
-        margin: 0;
+        & #address {
+            font-size: 1.2em;
+            font-weight: 900;
+            margin: 0;
+        }
     }
 
     & #copyright {
         padding-top: 10px;
         font-weight: 900;
         font-weight: 1.3em;
+    }
+}
+
+@media screen and (min-width: 581px) {
+    footer {
+        grid: unset;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "social address"
+        "copyright copyright";
+
+        & div.social {
+            grid-area: social;
+
+        }
+
+        div.address {
+            grid-area: address;
+        }
+
+        & #copyright {
+            grid-area: copyright;
+            justify-self: center;
+        }
     }
 }
