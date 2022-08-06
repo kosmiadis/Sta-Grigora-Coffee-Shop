@@ -225,15 +225,22 @@ main div.form-container {
   padding: 2em;
   margin: auto;
   width: 95%;
-  outline: 2px solid blue;
+  background-color: #C4E8C2;
+  border-inline: 5px solid #AECFA4;
+}
+
+main div.form-container p {
+  font-size: 3em;
+  font-weight: 600;
 }
 
 main div.form-container form {
-  padding-block: 3em;
+  padding-block: 2em;
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-auto-rows: max-content;
   row-gap: 10px;
+  align-items: center;
   column-gap: 10px;
 }
 
@@ -241,15 +248,42 @@ main div.form-container form label {
   font-size: 1.1em;
   font-weight: 600;
   font-family: 'Lato';
+  text-align: right;
 }
 
 main div.form-container form textarea {
-  grid-column-start: 1;
-  grid-column-end: -1;
   resize: none;
+  border: unset;
+  border-radius: 6px;
+  padding: 0.5em 0.2em;
+  font-size: 1.2em;
 }
 
-main div.form-container form input[type='sumbit'] {
+main div.form-container form textarea:focus {
+  outline: unset;
+}
+
+main div.form-container form input {
+  font-size: 1.2em;
+  border: unset;
+  padding: 0.5em;
+  border-radius: 6px;
+}
+
+main div.form-container form input:focus {
+  outline: unset;
+}
+
+main div.form-container form input[type='submit'] {
   grid-column-start: 1;
   grid-column-end: -1;
+  font-size: 1.3em;
+  background-color: #AECFA4;
+  border: unset;
+  width: 60%;
+  font-weight: 600;
+  justify-self: center;
+  padding: 0.3em;
+  border-radius: 10px;
+  margin-top: 20px;
 }
