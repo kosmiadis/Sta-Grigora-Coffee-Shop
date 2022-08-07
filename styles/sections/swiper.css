@@ -2,6 +2,7 @@ div.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 40px;
 }
 
 div.container div.swiper {
@@ -26,4 +27,25 @@ div.container div.swiper div.swiper-slide div.content img {
 
 div.container div.swiper div.swiper-slide div.content p {
   max-width: 70%;
+}
+
+div.container div.swiper div.swiper-slide div.content p.description {
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+div.container div.swiper div.swiper-slide div.content p.price {
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 481px) {
+  div.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  div.container p {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
