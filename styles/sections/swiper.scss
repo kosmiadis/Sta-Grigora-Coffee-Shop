@@ -1,0 +1,17 @@
+div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    div.swiper {
+        background-color: white;
+        width: 60%;
+        height: min-content;
+
+        div.swiper-slide {
+            img {
+                width: 100px;
+            }
+        }
+    }
+}
