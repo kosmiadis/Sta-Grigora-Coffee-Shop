@@ -1,4 +1,4 @@
-@import "abstracts/colors.scss";
+@import "/styles/abstracts/colors.scss";
 
 div.container {
     display: flex;
@@ -38,7 +38,7 @@ div.container {
                 text-align: center;
 
                 img {
-                    width: 100px;
+                    width: 140px;
                 }   
 
                 p {
@@ -52,7 +52,7 @@ div.container {
                 }
 
                 p.price {
-                    font-weight: 600;
+                    font-weight: 800;
                     font-size: 1.3em;
                 }
             }
@@ -65,28 +65,12 @@ div.container {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
-
-        & div.swiper {
-        
-
-            div.swiper-slide {
-
-            }
-        }
     }
 }
 
 @media screen and (min-width: 841px) {
     div.container {
-        grid-template-columns: repeat(3,1fr);
-        
-        
-        & div.swiper {
-
-            div.swiper-slide {
-
-            }
-        }
+        grid-template-columns: repeat(3,1fr);        
     }
 
     
