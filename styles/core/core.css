@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: palegoldenrod;
-}
-
 body {
   font-family: 100%;
 }
@@ -21,7 +17,7 @@ body main {
   flex: 1;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 2320px) {
   body {
     font-size: 130%;
     max-width: 1400px;
