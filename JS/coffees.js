@@ -8,7 +8,6 @@ const data = [
 ]
 
 const swiperContainer = document.querySelector('.container')
-const addSwiperBtn = document.querySelector('#addSwiper')
 
 const swiperGenerator = () => {
 
@@ -61,6 +60,7 @@ const swiperGenerator = () => {
             content.appendChild(productPrice)
             
             swiperSlider.appendChild(content)
+            swiperWrapper.appendChild(swiperSlider)
         }
 
         swiperContainer.appendChild(swiper)
@@ -73,7 +73,4 @@ const swiperGenerator = () => {
 }
 
 const coffeesSwiper = swiperGenerator();
-
-addSwiperBtn.addEventListener('click', e => {
-    coffeesSwiper.createProducts(data)
-})
+coffeesSwiper.createProducts(data)
