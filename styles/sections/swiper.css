@@ -2,7 +2,15 @@ div.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   row-gap: 40px;
+}
+
+div.container h1 {
+  text-align: center;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 div.container div.swiper {
@@ -11,41 +19,56 @@ div.container div.swiper {
   background-color: white;
   border-radius: 15px;
   width: 80%;
+  max-width: 600px;
   height: 400px;
+  justify-self: center;
 }
 
-div.container div.swiper div.swiper-slide div.content {
+div.container div.swiper div.swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-div.container div.swiper div.swiper-slide div.content img {
-  width: 100px;
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content img {
+  max-width: 80%;
 }
 
-div.container div.swiper div.swiper-slide div.content p {
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content p {
   max-width: 70%;
 }
 
-div.container div.swiper div.swiper-slide div.content p.description {
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content p.description {
   font-weight: normal;
   font-size: 1.2em;
 }
 
-div.container div.swiper div.swiper-slide div.content p.price {
-  font-weight: 600;
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content p.price {
+  font-weight: 800;
   font-size: 1.3em;
+}
+
+div.container div.swiper div.swiper-button-prev, div.container div.swiper div.swiper-button-next {
+  color: #46A094;
 }
 
 @media screen and (min-width: 481px) {
   div.container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-  div.container p {
-    grid-column-start: 1;
-    grid-column-end: -1;
+}
+
+@media screen and (min-width: 841px) {
+  div.container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

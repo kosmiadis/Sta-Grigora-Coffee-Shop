@@ -373,6 +373,7 @@ div.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   row-gap: 40px;
 }
 
@@ -394,33 +395,43 @@ div.container div.swiper {
   justify-self: center;
 }
 
-div.container div.swiper .swiper-button-prev, div.container div.swiper .swiper-button-next {
-  color: #AECFA4;
+div.container div.swiper div.swiper-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-div.container div.swiper div.swiper-slide div.content {
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-div.container div.swiper div.swiper-slide div.content img {
-  width: 140px;
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content img {
+  max-width: 80%;
 }
 
-div.container div.swiper div.swiper-slide div.content p {
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content p {
   max-width: 70%;
 }
 
-div.container div.swiper div.swiper-slide div.content p.description {
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content p.description {
   font-weight: normal;
   font-size: 1.2em;
 }
 
-div.container div.swiper div.swiper-slide div.content p.price {
+div.container div.swiper div.swiper-wrapper div.swiper-slide div.content p.price {
   font-weight: 800;
   font-size: 1.3em;
+}
+
+div.container div.swiper div.swiper-button-prev, div.container div.swiper div.swiper-button-next {
+  color: #46A094;
+}
+
+div.container div.swiper div.swiper-pagination {
+  padding-top: 1em;
 }
 
 @media screen and (min-width: 481px) {
